@@ -84,6 +84,7 @@ bool Parser::parse_tree(MMap<string, string>& map) {
 					case 13: //create/make
 					case 19:
 					case 25: //batch
+					case 27:
 						map.insert("commands", tokenstr);
 						break;
 
@@ -99,6 +100,7 @@ bool Parser::parse_tree(MMap<string, string>& map) {
 					case 6: //table_name
 					case 15: //table name for make/create
 					case 21:
+					case 28:
 						map.insert("table_name", tokenstr);
 						break;
 
@@ -216,7 +218,7 @@ void Parser::make_machine(){
 	mark_cell(25, _table, SYMBOL, 26); //going to the symbol
 	mark_cell(26, _table, SYMBOL, 26); //you shouldn't get anything after the ".txt" but whatever
 
-	//quote states 
+	//quote states (not used yet)
 	mark_cell(5, _table, QUOTE, 27);
 	mark_cell(27, _table, SYMBOL, 28);
 	mark_cell(28, _table, QUOTE, 6);
@@ -224,6 +226,10 @@ void Parser::make_machine(){
 	mark_cell(7, _table, QUOTE, 29);
 	mark_cell(29, _table, SYMBOL, 30);
 	mark_cell(29, _table, SYMBOL, 30);
+
+	//These are the drop table
+	mark_cell(0, _table, DROP, 27);
+	mark_cell(27, _table, SYMBOL, 28);
 	/*
 		-----------------------------------------------------
 						   SUCCESS STATES
@@ -274,6 +280,10 @@ void Parser::make_machine(){
 	mark_cell(25, _table, 0, 0); //represents "batch batch1.txt" 
 	mark_cell(26, _table, 0, 1); 
 
+	//marking the drop
+	mark_cell(26, _table, 0, 0);
+	mark_cell(27, _table, 0, 1);
+
 }
 
 void Parser::init_keywords() {
@@ -290,6 +300,7 @@ void Parser::init_keywords() {
 	_keywords["FIELDS"] = FIELDS;
 	_keywords["INSERT"] = INSERT;
 	_keywords["BATCH"] = BATCH;
+	_keywords["DROP"] = DROP;
 	_keywords[">"] = RELATIONAL_OPERATOR;
 	_keywords[">="] = RELATIONAL_OPERATOR;
 	_keywords["<="] = RELATIONAL_OPERATOR;

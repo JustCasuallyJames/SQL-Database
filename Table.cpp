@@ -128,6 +128,10 @@ void Table::reindex() {
 	f.close();
 }
 
+int Table::get_record_serial() {
+	return _serial;
+}
+
 vector<string> Table::get_fields() const {
 	return _fields;
 }

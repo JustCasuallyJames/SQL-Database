@@ -125,9 +125,6 @@ V& Map<K, V>::operator[](const K& key) { //if it's not there, it will add it.
     if (_map.find(Pair<K, V>(key, V())) == Iterator(nullptr)) {
         _map.insert(Pair<K, V>(key, V()));
     }
-    //if (!_map.contains(Pair<K,V>(key,V()))) {
-    //    _map.insert(Pair<K, V>(key, V()));
-    //}
     return _map.get(Pair<K, V>(key, V()))._value;
 }
 
@@ -156,7 +153,7 @@ void Map<K, V>::insert(const K& k, const V& v) {
 template<typename K, typename V>
 //this is the remove 
 void Map<K, V>::erase(const K& key) {
-
+    _map.remove(Pair<K, V>(key, V()));
 }
 
 template<typename K, typename V>

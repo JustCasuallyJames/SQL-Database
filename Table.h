@@ -26,7 +26,7 @@ public:
 	void insert_into(vector<string> fields);
 
 	void reindex();
-
+	int get_record_serial();
 	vector<string> get_fields() const;
 	friend ostream& operator << (ostream& outs, const Table& print_me) {
 		const int number_width = 8;

@@ -8,6 +8,16 @@ SQL::SQL() {
 
 }
 
+SQL::~SQL() {
+	//fstream f;
+	//open_fileW(f, "tables.txt");
+	//int j = 0;
+	//for (auto it = _table_names.begin(); it != _table_names.end(); ++it, ++j) { //used auto to make it easier
+	//	f << it[j] << '\n';
+	//}
+	//f.close();
+}
+
 void SQL::SQL_interactive() {
 	string command;
 	while (true) {
@@ -74,6 +84,8 @@ bool SQL::run_command(const string& command) {
 				out.close();
 				//saves it into the map of tables
 				_tables[table_name] = Table(table_name, fields);
+				//push back the table_name into the table_names string vector
+				_table_names.push_back(table_name);
 				cout << _tables[table_name] << endl;
 
 			} else {
@@ -92,6 +104,27 @@ bool SQL::run_command(const string& command) {
 		else if (first_command == "batch") {
 			run_file(table_name);
 			cout << "\n\n-------------------------------BATCH PROCESS FINISHED-------------------------------\n\n";
+		} 
+		else if (first_command == "drop") {
+			if (_tables.contains(table_name)) {
+				std::vector<string>::iterator current_pos = find(_table_names.begin(), _table_names.end(), table_name);
+				if (current_pos != _table_names.end()) {
+					_table_names.erase(current_pos);
+					_tables.erase(table_name);
+					cout << "\nDropped: " << table_name << endl;
+				}
+				
+				fstream f;
+				open_fileW(f, "tables.txt");
+				int j = 0;
+				for (auto it = _table_names.begin(); it != _table_names.end(); it++) {
+					f << it[j] << '\n';
+				}
+				f.close();
+
+			} else {
+				cout << "Error [Drop]: Could not find table_name: " << table_name << endl;
+			}
 		}
 		
 		cout << "\nSQL: DONE!\n";
@@ -102,6 +135,9 @@ bool SQL::run_command(const string& command) {
 		cout << endl;
 		print_table_list();
 		cout << "\nSQL: DONE!\n";
+		return true;
+	} else {
+		cout << "\nInvalid Command.\n";
 		return true;
 	}
 	
@@ -121,6 +157,7 @@ void SQL::get_all_tables() {
 	print_table_list();
 	while (fin >> table_name) {
 		_tables[table_name] = Table(table_name);
+		_table_names.push_back(table_name);
 	}
 	fin.close();
 }
@@ -152,12 +189,16 @@ void SQL::print_table_list() {
 	cout << "| List of available tables	       |\n";
 	cout << "| Type \"tables\" for a list of tables   |\n";
 	cout << "----------------------------------------\n";	
+
+	//for (auto it = _table_names.begin(); it != _table_names.end(); it++) {
+	//	cout << numTables++ << ". " << table_name << endl;
+	//}
 	while (fin >> table_name) {
-
 		cout << numTables++ << ". " << table_name << endl;
-
 	}
+
 	cout << endl << endl;
+	fin.close();
 }
 
 void SQL::print_welcome() {

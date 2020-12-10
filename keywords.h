@@ -21,5 +21,6 @@ enum KEYWORDS {
 	TABLE,
 	FIELDS,
 	INSERT,
-	BATCH
+	BATCH,
+	DROP
 };

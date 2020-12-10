@@ -136,7 +136,7 @@ void MMap<K, V>::insert(const K& k, const V& v) {
 
 template<typename K, typename V>
 inline void MMap<K, V>::erase(const K& key) {
-
+    _mmap.remove(MPair<K, V>(key));
 }
 
 template<typename K, typename V>
