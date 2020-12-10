@@ -1,0 +1,213 @@
+//****************************************************************************
+//		CREATE TABLES AND INSERT RECORDS
+//****************************************************************************
+
+
+make table employee fields  last, 		first, 			dep,  		salary, 	year
+insert into employee values Blow, 		Joe, 			CS,		 	100000, 	2018
+insert into employee values Blow, 		JoAnn,			Physics, 	200000, 	2016
+insert into employee values Johnson, 	Jack, 			HR, 		150000, 	2014
+insert into employee values Johnson, 	"Jimmy", 		Chemistry,	140000, 	2018
+insert into employee values Yao,	 	Jimmy, 			Math,		145000, 	2014
+insert into employee values "Yao", 		Flo, 			CS,			147000, 	2012
+insert into employee values Yang, 		Bo, 			CS,			160000, 	2013
+insert into employee values Jackson,	"Flo", 			Math,		165000, 	2017
+insert into employee values Jackson,	Bo,	 			Chemistry,	130000, 	2011
+insert into employee values "Jackson",	Billy, 			Math,	 	170000, 	2017
+insert into employee values Johnson,	"Mary Ann", 	Math,		165000, 	2014
+insert into employee values Johnson,	"Billy Bob", 	Physics,	142000, 	2014
+insert into employee values Johnson,	Billy, 			"Phys Ed",	102000, 	2014
+insert into employee values "Van Gogh",	Vincent, 		Art,		240000, 	2015
+insert into employee values "Van Gogh",	Vincent, 		CS,			245000, 	2015
+insert into employee values "Van Gogh",	"Jim Bob", 		"Phys Ed",	230000, 	2010
+select * from employee 
+
+make table student fields fname, lname, major, age, company
+insert into student values Flo, 			Yao, 		CS, 				20, 	Google
+insert into student values Bo, 				Yang, 		CS, 				28,		Microsoft
+insert into student values "Sammuel L.", 	Jackson, 	CS, 				40,		Uber
+insert into student values "Flo", 			"Jackson", 	Math,	 			21,		Google
+insert into student values "Greg", 			"Pearson", 	Physics,			20,		Amazon
+insert into student values "Jim Bob", 		Smith, 		Math,	 			23,		Verizon
+insert into student values Calvin, 			Woo, 		Physics,			22,		Uber
+insert into student values "Anna Grace", 	"Del Rio", 	CS,	 				22,		USAF
+insert into student values "Teresa Mae", 	Gowers, 	Chemistry,			22,		Verizon
+insert into student values Alex,			Smith,		"Gender Studies", 	53,		Amazon
+select * from student
+
+
+//****************************************************************************
+//		SIMPLE SELECT:
+//****************************************************************************
+
+select * from student
+
+//------- simple strings -------------------
+select * from student where lname = Jackson
+select * from student where major = CS
+select * from student where company = Uber
+
+//----- quoted strings ---------------------
+select * from student where lname = "Del Rio"
+select * from student where fname = "Jim Bob"
+select * from student where fname = "Anna Grace"
+select * from student where fname = "Teresa Mae"
+
+//-------- non-existing string ------------------
+select * from student where lname = "Does Not Exist"
+
+//****************************************************************************
+//		RELATIONAL OPERATORS:
+//****************************************************************************
+
+//.................
+//:Greater Than   :
+//.................
+select * from student where lname > Yang
+select * from student where major > Math
+select * from student where fname > "Sammuel L."
+select * from employee where salary > 200000
+select * from employee where dep > Chemistry
+select * from employee where last > Jackson
+select * from employee where first > "Billy Bob"
+
+
+//. . . . . . . . . . . . . (Greater Than: Non-existing) . . . . . . . . . . . . . . . . . . . . . 
+select * from student where age > 50
+select * from student where age > 35
+select * from student where fname > T
+select * from employee where salary > 130000
+select * from employee where  year > 2009
+
+//. . . . . . . . . . . . . (Greater than: last item) . . . . . . . . . . . . . . . . . .
+select * from student where age  > 53
+select * from student where lname > Yao
+select * from student where fname > "Teresa Mae"
+select * from employee where last > "Van Gogh"
+select * from employee where first > Vincent
+select * from employee where salary > 260000
+
+//. . . . . . . . . . . . . (Greater Than: Passed last item) . . . . . . . . . . . . . . . . . . . . . 
+select * from student where age > 54
+select * from student where lname > Zoolander
+select * from employee where last > Zoolaner
+select * from employee where first > Xu
+
+//.................
+//:Greater Equal  :
+//.................
+select * from student where lname >= Yang
+select * from student where fname >= "Sammuel L."
+select * from student where age >= 40
+//. . . . . .  (Greater Equal non-existing: ) . . . . . . . . . . . 
+select * from employee where last >= Jack
+select * from employee where first >= Bill
+select * from employee where salary >= 235000
+
+
+//.................
+//:Less Than      :
+//.................
+
+
+//. . . . . . . . . . . . . (Less Than: Non-existing) . . . . . . . . . . . . . . . . . . . . . 
+select * from student where lname < Jackson
+select * from student where major < Math
+select * from student where fname < "Jim Bob"
+select * from employee where salary < 200000
+select * from employee where dep < CS
+select * from employee where last < Jackson
+select * from employee where first < "Billy Bob"
+
+//. . . . . . . . . . . . . (Less than: first item) . . . . . . . . . . . . . . . . . .
+select * from student where age  < 20
+select * from student where lname < "Del Rio"
+select * from student where fname < Alex
+select * from employee where last < Blow
+select * from employee where first < Billy
+select * from employee where salary < 100000
+
+
+//. . . . . . . . . . . . . (Less Than: before first item) . . . . . . . . . . . . . . . . . . . . . 
+
+select * from student where age  < 19
+select * from student where lname < Adams
+select * from student where fname < Adam
+select * from employee where last < Alex
+select * from employee where first < Avory
+select * from employee where dep < Alchemy
+
+
+//.................
+//:Less Equal     :
+//.................
+
+select * from student where lname <= Smith
+select * from student where fname <= Greg
+select * from student where age <= 40
+
+//. . . . . .  (Less Equal non-existing: ) . . . . . . . . . . . 
+select * from employee where last <= Peach
+select * from employee where first <= Gary
+select * from employee where salary <= 23500
+
+//****************************************************************************
+//		LOGICAL OPERATORS
+//****************************************************************************
+
+
+//.................
+//:AND            :
+//.................
+
+select * from student where fname = "Flo" and lname = "Yao"
+select * from student where major = "CS" and age < 25
+select * from student where major < Math and age > 25
+select * from employee where dep = CS and salary > 150000
+select * from employee where last = Jackson and year < 2015
+select * from employee where last = Johnson and year >=2014
+
+
+//.................
+//:OR            :
+//.................
+select * from student where fname = Flo or lname = Jackson
+select * from student where age >=40  or company = Verizon
+select * from employee where first = Bo or last = Johnson
+select * from employee where year >= 2015 or dep = CS
+
+
+//.................
+//:OR AND         :
+//.................
+select * from student where fname = Flo or major = CS and age <= 23
+select * from student where lname = Jackson or age < 23 and company > Uber
+select * from employee where last = "Van Gogh" or last = Jackson and salary >= 165000
+
+
+//.................
+//:AND OR AND     :
+//.................
+
+select * from student where age <30 and major=CS or major = Physics and company = Amazon
+select * from student where age <=40 and company=Uber or major = CS and company = Google
+select * from employee where dep = CS and salary >= 160000 or year > 2014 and last = "Van Gogh"
+
+
+//.................
+//:OR AND OR      :
+//.................
+
+select * from student where lname = Yang or major = CS and age < 23 or company = Google 
+select * from student where major = Physics or major = Math and company = Google or lname = Jackson
+select * from employee where dep = CS or year >2014 and year < 2018 or salary >= 265000
+
+
+
+
+
+
+
+
+
+
