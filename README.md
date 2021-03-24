@@ -27,7 +27,7 @@ In addition to the required commands, there are additional useful features.
 ## Sample run
 
 ![112393415-425a0900-8cb8-11eb-8fc6-c1172663b47e](https://user-images.githubusercontent.com/50897551/112394550-26effd80-8cba-11eb-9640-0ff3c9a1c174.png)
-![Screenshot 2021-03-24 160054](https://user-images.githubusercontent.com/50897551/112394563-2e170b80-8cba-11eb-9c2e-3a18263aaf7a.png)
+![Screenshot 2021-03-24 160054](https://user-images.githubusercontent.com/50897551/112394650-556dd880-8cba-11eb-8597-1bff8a43cb01.png)
 
 
 
