@@ -1,5 +1,12 @@
 # SQL-Database
-Simple database using SQL commands via the command line. This is for Barkeshli's CS8 Advanced Data Structures class.
+
+Simple database using SQL commands via the command line. It was all written from scratch using advanced C++ knowledge
+
+## Dependencies
+
+There are no dependencies except for the standard vector library. All of the data structures used in this project are written from scratch so this project is able to be ran from any compiler.
+
+## Usage
 
 | Command |
 | :---- |
