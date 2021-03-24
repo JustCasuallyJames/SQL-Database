@@ -140,44 +140,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FileTokenizer.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Parser.cpp" />
-    <ClCompile Include="Record.cpp" />
-    <ClCompile Include="shuntingyard.cpp" />
-    <ClCompile Include="SQL.cpp" />
-    <ClCompile Include="STokenizer.cpp" />
-    <ClCompile Include="string_utility.cpp" />
-    <ClCompile Include="Table.cpp" />
-    <ClCompile Include="tableHelper.cpp" />
-    <ClCompile Include="Token.cpp" />
+    <ClCompile Include="src\FileTokenizer.cpp" />
+    <ClCompile Include="src\Parser.cpp" />
+    <ClCompile Include="src\Record.cpp" />
+    <ClCompile Include="src\shuntingyard.cpp" />
+    <ClCompile Include="src\SQL.cpp" />
+    <ClCompile Include="src\STokenizer.cpp" />
+    <ClCompile Include="src\string_utility.cpp" />
+    <ClCompile Include="src\Table.cpp" />
+    <ClCompile Include="src\tableHelper.cpp" />
+    <ClCompile Include="src\Token.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BPlusTrees.h" />
-    <ClInclude Include="BTreeFunctions.h" />
-    <ClInclude Include="CONSTANTS.h" />
-    <ClInclude Include="FileTokenizer.h" />
-    <ClInclude Include="keywords.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="MMap.h" />
-    <ClInclude Include="MPair.h" />
-    <ClInclude Include="node.h" />
-    <ClInclude Include="output.h" />
-    <ClInclude Include="Pair.h" />
-    <ClInclude Include="Parser.h" />
-    <ClInclude Include="Queue.h" />
-    <ClInclude Include="Record.h" />
-    <ClInclude Include="RPN.h" />
-    <ClInclude Include="set_utility.h" />
-    <ClInclude Include="shuntingyard.h" />
-    <ClInclude Include="SQL.h" />
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="STokenizer.h" />
-    <ClInclude Include="string_utility.h" />
-    <ClInclude Include="Table.h" />
-    <ClInclude Include="tableHelper.h" />
-    <ClInclude Include="Token.h" />
-    <ClInclude Include="work_report.h" />
+    <ClInclude Include="headers\BPlusTrees.h" />
+    <ClInclude Include="headers\BTreeFunctions.h" />
+    <ClInclude Include="headers\CONSTANTS.h" />
+    <ClInclude Include="headers\FileTokenizer.h" />
+    <ClInclude Include="headers\keywords.h" />
+    <ClInclude Include="headers\Map.h" />
+    <ClInclude Include="headers\MMap.h" />
+    <ClInclude Include="headers\MPair.h" />
+    <ClInclude Include="headers\node.h" />
+    <ClInclude Include="headers\Pair.h" />
+    <ClInclude Include="headers\Parser.h" />
+    <ClInclude Include="headers\Queue.h" />
+    <ClInclude Include="headers\Record.h" />
+    <ClInclude Include="headers\RPN.h" />
+    <ClInclude Include="headers\set_utility.h" />
+    <ClInclude Include="headers\shuntingyard.h" />
+    <ClInclude Include="headers\SQL.h" />
+    <ClInclude Include="headers\Stack.h" />
+    <ClInclude Include="headers\STokenizer.h" />
+    <ClInclude Include="headers\string_utility.h" />
+    <ClInclude Include="headers\Table.h" />
+    <ClInclude Include="headers\tableHelper.h" />
+    <ClInclude Include="headers\Token.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

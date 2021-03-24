@@ -18,112 +18,110 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Record.cpp">
+    <ClCompile Include="src\FileTokenizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="STokenizer.cpp">
+    <ClCompile Include="src\Parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Table.cpp">
+    <ClCompile Include="src\Record.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tableHelper.cpp">
+    <ClCompile Include="src\shuntingyard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Token.cpp">
+    <ClCompile Include="src\SQL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Parser.cpp">
+    <ClCompile Include="src\STokenizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="shuntingyard.cpp">
+    <ClCompile Include="src\string_utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="string_utility.cpp">
+    <ClCompile Include="src\Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SQL.cpp">
+    <ClCompile Include="src\tableHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileTokenizer.cpp">
+    <ClCompile Include="src\Token.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BPlusTrees.h">
+    <ClInclude Include="headers\BPlusTrees.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BTreeFunctions.h">
+    <ClInclude Include="headers\BTreeFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CONSTANTS.h">
+    <ClInclude Include="headers\CONSTANTS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="keywords.h">
+    <ClInclude Include="headers\FileTokenizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="headers\keywords.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MMap.h">
+    <ClInclude Include="headers\Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MPair.h">
+    <ClInclude Include="headers\MMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pair.h">
+    <ClInclude Include="headers\MPair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Parser.h">
+    <ClInclude Include="headers\node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Record.h">
+    <ClInclude Include="headers\Pair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="STokenizer.h">
+    <ClInclude Include="headers\Parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Table.h">
+    <ClInclude Include="headers\Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tableHelper.h">
+    <ClInclude Include="headers\Record.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Token.h">
+    <ClInclude Include="headers\RPN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="node.h">
+    <ClInclude Include="headers\set_utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Queue.h">
+    <ClInclude Include="headers\shuntingyard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Stack.h">
+    <ClInclude Include="headers\SQL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="shuntingyard.h">
+    <ClInclude Include="headers\Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="string_utility.h">
+    <ClInclude Include="headers\STokenizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RPN.h">
+    <ClInclude Include="headers\string_utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="set_utility.h">
+    <ClInclude Include="headers\Table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SQL.h">
+    <ClInclude Include="headers\tableHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="work_report.h">
+    <ClInclude Include="headers\Token.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="output.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FileTokenizer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include=".gitattributes" />
   </ItemGroup>
 </Project>
