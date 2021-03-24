@@ -776,7 +776,9 @@ BPlusTree<T>* BPlusTree<T>::merge_with_next_subset(int i) {
 
 template<class T>
 void BPlusTree<T>::rotate_right(int i) {//i-1
-
+    /*
+        
+    */
     //detach from i-1 to move to data[i]
     T deleted_item;
     detach_item(subset[i]->data, subset[i]->data_count, deleted_item);
