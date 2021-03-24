@@ -4,13 +4,13 @@
 #include <random>
 
 #include <iostream>
-#include "Token.h"
-#include "STokenizer.h"
-#include "Parser.h"
-#include "Table.h"
-#include "shuntingyard.h"
-#include "SQL.h"
-#include "BTreeFunctions.h"
+#include "headers/Token.h"
+#include "headers/STokenizer.h"
+#include "headers/Parser.h"
+#include "headers/Table.h"
+#include "headers/shuntingyard.h"
+#include "headers/SQL.h"
+#include "headers/BTreeFunctions.h"
 using namespace std;
 int main()
 {

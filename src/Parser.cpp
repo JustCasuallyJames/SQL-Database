@@ -1,4 +1,4 @@
-#include "Parser.h"
+#include "../headers/Parser.h"
 
 int Parser::_table[MAX_ROWS][MAX_COLUMNS];
 

@@ -1,4 +1,4 @@
-#include "STokenizer.h"
+#include "../headers/STokenizer.h"
 int STokenizer::_table[MAX_ROWS][MAX_COLUMNS];
 
 STokenizer::STokenizer() {

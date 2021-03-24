@@ -1,4 +1,4 @@
-#include "FileTokenizer.h"
+#include "../headers/FileTokenizer.h"
 
 
 FileTokenizer::FileTokenizer(string fname) {

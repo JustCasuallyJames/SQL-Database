@@ -1,4 +1,4 @@
-#include "Record.h"
+#include "../headers/Record.h"
 
 long Record::write(fstream& outs) {
 

@@ -1,4 +1,4 @@
-#include "shuntingyard.h"
+#include "../headers/shuntingyard.h"
 
 shuntingyard::shuntingyard() {
 	init_operators();

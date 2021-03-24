@@ -1,4 +1,4 @@
-#include "tableHelper.h"
+#include "../headers/tableHelper.h"
 //Fill all cells of the array with -1
 void init_table(int _table[][MAX_COLUMNS]) {
     for (int i = 0; i < MAX_ROWS; i++) {

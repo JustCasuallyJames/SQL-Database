@@ -1,4 +1,4 @@
-#include "string_utility.h"
+#include "../headers/string_utility.h"
 
 string uppercase(string word) {
 	string result = word;

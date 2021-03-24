@@ -1,4 +1,4 @@
-#include "Table.h"
+#include "../headers/Table.h"
 
 Table::Table() {}
 
