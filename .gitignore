@@ -6,6 +6,13 @@
 # User-specific files
 Exclude Files/
 misc/
+.gitattributes
+##The microsoft studio files
+Parser.sln
+Parser.vcxproj
+Parser.vcxproj.filters
+Parser.vcxproj.user
+
 *.rsuser
 *.suo
 *.user
