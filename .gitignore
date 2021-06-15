@@ -342,3 +342,10 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+
+#ignoring the misc files
+Exclude-Files/
+.vs/
+x64/
+misc/
