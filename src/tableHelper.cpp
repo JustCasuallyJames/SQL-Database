@@ -72,6 +72,4 @@ void show_string(char s[], int _pos) {
         std::cout << s[counter];
         counter++;
     }
-    std::cout << std::setw(4) << "pos: " << _pos << std::endl;
-    std::cout << std::setw(_pos) << "^";
 }
